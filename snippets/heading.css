@@ -1,0 +1,115 @@
+/* Definindo tamanhos e estilos das fontes para todos os modos */
+body {
+  --h1-size: 1.10em;
+  --h2-size: 1.07em;
+  --h3-size: 1.05em;
+  --h4-size: 1.03em;
+  --h5-size: 1.01em;
+  --h6-size: 1em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 400;
+  --h1-line-height: 1;
+  --h2-line-height: 1;
+  --h3-line-height: 1;
+  --h4-line-height: 1;
+  --h5-line-height: 1.6;
+  --h6-line-height: 1.6;
+}
+
+/* Modo claro */
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-preview-view h2,
+.theme-light .markdown-preview-view h3,
+.theme-light .markdown-preview-view h4,
+.theme-light .cm-header-1,
+.theme-light .cm-header-2,
+.theme-light .cm-header-3,
+.theme-light .cm-header-4 {
+    width: 100%;            /* Largura total */
+    display: block;         /* Garante que ocupe toda a linha */
+    padding: 4px 0;         /* Adiciona um pouco de espaço vertical */
+    margin-left: 0px;     /* Compensa o padding padrão */
+    padding-left: 0px;     /* Restaura o alinhamento do texto */
+}
+
+.theme-light .markdown-preview-view h1,
+.theme-light .cm-header-1 {
+    background-color: rgb(231, 243, 248); /* Cor de fundo */
+}
+
+.theme-light .markdown-preview-view h2,
+.theme-light .cm-header-2 {
+    background-color: rgb(251, 243, 219); /* Cor de fundo */
+}
+
+.theme-light .markdown-preview-view h3,
+.theme-light .cm-header-3 {
+    background-color: rgb(237, 243, 236); /* Cor de fundo */
+}
+
+.theme-light .markdown-preview-view h4,
+.theme-light .cm-header-4 {
+    background-color: rgb(241, 241, 239);; /* Cor de fundo */
+}
+
+/* Modo escuro */
+/* Tema Escuro - H1 até H4 */
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .cm-header-1,
+.theme-dark .cm-header-2,
+.theme-dark .cm-header-3,
+.theme-dark .cm-header-4 {
+    width: 100%;
+    display: block;
+    padding: 4px 0;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.theme-dark .markdown-preview-view h1,
+.theme-dark .cm-header-1 {
+    background-color: rgb(20, 58, 78); /* Cor de fundo */
+    color: #D8DEE9; /* Cinza claro para texto */
+}
+
+.theme-dark .markdown-preview-view h2,
+.theme-dark .cm-header-2 {
+    background-color: rgb(86, 67, 40); /* Cor de fundo */
+    color: #D8DEE9; /* Azul escuro para texto */
+}
+
+.theme-dark .markdown-preview-view h3,
+.theme-dark .cm-header-3 {
+    background-color: rgb(36, 61, 48); /* Cor de fundo */
+    color: #D8DEE9; /* Azul escuro para texto */
+}
+
+.theme-dark .markdown-preview-view h4,
+.theme-dark .cm-header-4 {
+    background-color: rgb(47, 47, 47); /* Cor de fundo */
+    color: #D8DEE9; /* Cinza claro para texto */
+}
+/* Margem entre títulos */
+body {
+    --p-spacing: 0rem;
+    --heading-spacing: calc(var(--p-spacing) * 1);
+}
+
+/* Margem entre textos */
+body{
+  --line-height-normal: 1.7;
+}
+
+/* pixel padding above each h6 element */
+h6 {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+

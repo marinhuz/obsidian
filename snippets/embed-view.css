@@ -1,0 +1,75 @@
+/* Reseta os estilos do embed para um estado mais limpo */
+.markdown-embed {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    position: relative;
+}
+
+/* Remove título e link do embed */
+.markdown-embed-title,
+.internal-embed .markdown-embed-title {
+    display: none;
+}
+
+/* Estiliza o conteúdo do embed para parecer com o arquivo original */
+.markdown-embed-content {
+    padding: 0 !important;
+    max-height: unset !important;
+    display: block !important;
+}
+
+/* Garante que o texto dentro do embed mantenha sua formatação original */
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content p {
+    white-space: pre !important;
+    font-family: var(--font-text);
+    color: var(--text-normal);
+    font-size: var(--font-text-size);
+    line-height: var(--line-height-normal);
+}
+
+/* Preserva linhas em branco */
+.markdown-preview-view .markdown-embed-content p:empty::before {
+    content: "\00a0";
+    display: block !important;
+    height: var(--line-height-normal);
+}
+
+/* Remove margens extras de parágrafos mas mantém altura da linha */
+.markdown-preview-view .markdown-embed-content p {
+    margin: 0;
+    min-height: var(--line-height-normal);
+    display: block !important;
+}
+
+/* Adiciona uma indicação sutil de que é um embed */
+.markdown-embed::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--text-faint);
+    opacity: 0.25;
+}
+
+/* Ajustes para embeds inline */
+:is(li, .HyperMD-list-line) > .internal-embed[alt*='^'] {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.internal-embed[alt*='^'] {
+    padding-left: 2px;
+    
+    & :is(p, ul, li) {
+        margin-block: 0;
+    }
+}
+
+/* Remove linha roxa padrão */
+body {
+    --embed-border-start: unset;
+}

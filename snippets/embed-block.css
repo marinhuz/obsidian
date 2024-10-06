@@ -1,0 +1,39 @@
+/* Aplica estilos apenas aos callouts do tipo "note" */
+.callout[data-callout="note"] {
+    /* Remove estilos padrão */
+    background-color: transparent;
+    border-left: none;
+    padding: 0;
+    
+    /* Configurações de fonte */
+    font-style: normal;
+    font-weight: normal;
+    font-size: inherit;
+    
+    /* Configuração da borda com transição suave */
+    border: 1.5px solid transparent;
+    transition: border-color 0.1s ease;
+}
+
+/* Adiciona borda vermelha clara ao passar o mouse */
+.callout[data-callout="note"]:hover {
+    border-color: rgba(227, 134, 118, 1);
+}
+
+/* Oculta o título do callout do tipo "note" */
+.callout[data-callout="note"] .callout-title {
+    display: none;
+}
+
+/* Exibe linhas em branco corretamente em callouts */
+.callout[data-callout="note"] p:empty::before {
+    content: '\00a0'; /* Espaço não separável para garantir altura da linha */
+    display: block;
+    height: 1.7em; /* Altura da linha ajustável */
+}
+
+/* Garante espaçamento adequado entre parágrafos */
+.callout[data-callout="note"] p + p,
+.callout[data-callout="note"] ol + p {
+    margin-top: 1.7em;
+}

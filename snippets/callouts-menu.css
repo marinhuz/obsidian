@@ -1,0 +1,19 @@
+/* Callout usado para home*/
+.callout[data-callout="disciplinas"],
+.callout[data-callout="vade-mecum"],
+.callout[data-callout="horas-estudadas"] {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.callout[data-callout="disciplinas"] {--callout-color: 8,109,221; --callout-icon: book-copy;}
+.callout[data-callout="disciplinas"] a { color: rgb(0,109,221); }
+
+.callout[data-callout="vade-mecum"] {--callout-color: 224,172,0; --callout-icon:album;}
+.callout[data-callout="vade-mecum"] a { color: rgb(224,172,0); }
+
+.callout[data-callout="horas-estudadas"] {--callout-color: 8,185,78; --callout-icon: book-open-check;}
+.callout[data-callout="horas-estudadas"] a { color: rgb(8,185,78); }
+
